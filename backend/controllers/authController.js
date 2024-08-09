@@ -10,7 +10,7 @@ exports.signup = async (req, res) => {
     return res.status(400).json({ errors: errors.array() });
   }
 
-  const { firstname, lastname, username, email, password, dateOfBirth } = req.body;
+  const { firstname, lastname, username, email, password } = req.body;
 
   try {
     // Check if user already exists
@@ -26,7 +26,7 @@ exports.signup = async (req, res) => {
       username,
       email,
       password,
-      dateOfBirth
+  
     });
 
     // Save the user to the database
