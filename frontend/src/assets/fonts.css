@@ -1,0 +1,10 @@
+/* fonts.css */
+
+@font-face {
+    font-family: 'The Season';
+    src: url('/src/assets/fonts/Fontspring-DEMO-theseasons-bd.otf') format('woff2'),
+    url('/src/assets/fonts/Fontspring-DEMO-theseasons-it.otf') format('woff'),
+    url('/src/assets/fonts/Fontspring-DEMO-theseasons-ltit.otf') format('woff');
+    font-weight: normal;
+    font-style: normal;
+  }
