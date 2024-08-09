@@ -26,6 +26,16 @@
             />
           </div>
           <div class="form-group">
+            <label for="email">Email</label>
+            <input
+              v-model="email"
+              type="email"
+              id="email"
+              placeholder="Enter your email"
+              required
+            />
+          </div>
+          <div class="form-group">
             <label for="username">Username</label>
             <input
               v-model="username"
@@ -69,6 +79,7 @@ export default {
     return {
       firstname: '',
       lastname: '',
+      email: '',
       username: '',
       password: '',
     };
@@ -79,6 +90,7 @@ export default {
         await this.$store.dispatch('register', {
           firstname: this.firstname,
           lastname: this.lastname,
+          email: this.email,
           username: this.username,
           password: this.password,
         });
@@ -91,6 +103,8 @@ export default {
   },
 };
 </script>
+
+
 
 <style scoped>
 .register-page {

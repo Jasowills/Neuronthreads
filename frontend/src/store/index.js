@@ -86,7 +86,7 @@ const store = createStore({
     },
     async register({ commit }, userData) {
       try {
-        const response = await axios.post('/auth/register', userData);
+        const response = await axios.post('/auth/signup', userData);
         const token = response.data.token;
         const user = response.data.user;
         const expiration = new Date().getTime() + 24 * 60 * 60 * 1000; // 24 hours expiration

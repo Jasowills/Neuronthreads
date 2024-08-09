@@ -21,8 +21,8 @@
 export default {
   data() {
     return {
-      categories: ['Shirts', 'Trousers', 'Skirt', 'Shoes', 'Accessories', 'Bag'],
-      selectedCategories: ['Shirts', 'Trousers', 'Skirt', 'Shoes', 'Accessories', 'Bag'],
+      categories: ['Shirts', 'Trousers', 'Shoes', 'Accessories', 'Bag'],
+      selectedCategories: ['Shirts', 'Trousers', 'Shoes', 'Accessories', 'Bag'],
     };
   },
   methods: {

@@ -61,7 +61,7 @@ export default {
 <style scoped>
 .modal-overlay {
     position: fixed;
-    top: 30px;
+    top: 0;
     left: 0;
     width: 100%;
     height: 100%;
@@ -69,15 +69,18 @@ export default {
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 10px; /* Add padding to avoid content hitting the screen edges on small devices */
+    z-index: 1000;
 }
 
 .modal-content {
     background: #fff;
     padding: 20px;
     border-radius: 8px;
-    width: 80%;
+    width: 100%;
     max-width: 600px;
     position: relative;
+    box-sizing: border-box; /* Ensures padding is included in width calculations */
 }
 
 .close {
@@ -96,13 +99,17 @@ export default {
     display: block;
     margin-bottom: 5px;
     text-align: left;
+    font-size: 14px;
 }
 
-.form-group input, .form-group textarea {
+.form-group input,
+.form-group textarea {
     width: 100%;
-    padding: 8px;
+    padding: 10px;
     border-radius: 4px;
     border: 1px solid #ddd;
+    font-size: 16px;
+    box-sizing: border-box; /* Ensures padding is included in width calculations */
 }
 
 .submit-btn {
@@ -112,7 +119,45 @@ export default {
     padding: 10px 20px;
     border-radius: 4px;
     cursor: pointer;
+    width: 100%;
+    font-size: 16px;
 }
 
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .modal-content {
+        width: 100%; /* Make the modal take more width on smaller screens */
+        padding: 15px;
+    }
 
+    .form-group label,
+    .form-group input,
+    .form-group textarea,
+    .submit-btn {
+        font-size: 14px; /* Slightly reduce font size for better readability */
+    }
+
+    .close {
+        font-size: 20px; /* Adjust close button size */
+    }
+}
+
+@media (max-width: 480px) {
+    .modal-content {
+        width: 100%; /* Full width on very small screens */
+        padding: 10px;
+        border: 1px solid red;
+    }
+
+    .form-group label,
+    .form-group input,
+    .form-group textarea,
+    .submit-btn {
+        font-size: 12px; /* Further reduce font size for very small screens */
+    }
+
+    .close {
+        font-size: 18px; /* Adjust close button size */
+    }
+}
 </style>

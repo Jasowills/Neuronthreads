@@ -27,7 +27,7 @@
         </template>
         <template v-if="isAuthenticated">
           <div class="user-info">
-            Hi {{ user?.firstname || 'User' }}!
+            Hi {{ user?.username || 'User' }}!
           </div>
           <div @click="showLogoutConfirm = true" class="logout-icon">
             <img src="../assets/logout.png" alt="logout" />

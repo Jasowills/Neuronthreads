@@ -78,8 +78,8 @@ export default {
   align-items: center;
   justify-content: center;
   width: 100%;
-  margin-top: 50px;
-  margin-bottom: 50px;
+  margin-top: 100px;
+  margin-bottom: 100px;
   max-width: 500px;
   padding: 20px;
   background-color: white;
